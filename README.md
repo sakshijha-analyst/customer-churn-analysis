@@ -1,96 +1,68 @@
-# Customer Churn Analysis| End-to-End Data Analytics Project | SQL + Python + Machine Learning + Power BI
+# Customer Churn Analysis
 
-## Project Overview
+**End-to-End Data Analytics Project**
+SQL | Python | Machine Learning | Power BI
 
-Customer churn directly impacts business growth and profitability. Understanding why customers leave and predicting who is likely to churn allows companies to take proactive retention measures.
+This project analyzes customer behavior to identify churn drivers and predict customers likely to leave.
+Data was extracted using SQL, modeled using Python (Random Forest), and visualized in an interactive Power BI dashboard.
 
-This project builds an end-to-end churn analysis pipeline combining SQL for data extraction, Python for machine learning, and Power BI for business intelligence visualization.
+---
 
-Customer data was queried and prepared using SQL, analyzed and modeled using Python, and the results were visualized in an interactive Power BI dashboard to uncover churn patterns and high-risk customer segments.
+# Dashboard Preview
 
-# Tools & Technologies
+*(add your screenshot here)*
 
-**SQL**
-Data extraction and preparation
+---
 
-**Python (Pandas, Scikit-learn)**
-Data preprocessing and machine learning
+# Key Insights
 
-**Jupyter Notebook**
-Model development and experimentation
+### 1. Older customers show the highest churn risk
 
-**Power BI**
-Interactive business intelligence dashboard
+Customers **aged 50+ represent 44.2% of the customer base** and show the highest churn rates.
 
-**Excel / CSV**
-Data storage and data transfer between stages
+### 2️. Contract type is the strongest retention factor
 
-# Project Workflow
+* **Month-to-month:** 46.5% churn
+* **Two-year contracts:** 2.7% churn
 
-## 1. Data Extraction (SQL)
+Long-term contracts drastically improve retention.
 
-Customer churn data was queried from the database using SQL.
-The queries were used to create structured datasets used for analysis and modeling.
+### 3️. Fiber optic users churn the most
 
-The SQL stage prepared two key datasets:
+Customers using **fiber optic internet show a 41.1% churn rate**, suggesting pricing or service dissatisfaction.
 
-* **Churn Data** – historical customer information used to train the machine learning model
-* **Join Data** – customer records used for generating churn predictions
+### 4️. Missing add-on services increases churn
 
-These datasets formed the foundation of the analysis pipeline.
+Customers without **online security, backup, or device protection** churn significantly more.
 
-## 2. Data Preparation (Python)
+### 5️. Competitive offers drive most churn
 
-The SQL outputs were imported into **Python using Pandas** for preprocessing.
+The leading churn reason is **competitor offers**, followed by dissatisfaction and service issues.
 
-Key steps included:
+---
 
-* Removing identifiers and leakage columns
-* Cleaning and preparing features
-* Encoding categorical variables
-* Structuring the dataset for machine learning models
+# Predictive Model
 
-This ensured the data was ready for predictive modeling.
+A **Random Forest model** was built to identify customers likely to churn.
 
-## 3. Machine Learning Model
+**Results**
 
-A Random Forest Classifier was trained to predict customer churn.
+* **384 customers predicted to churn**
+* High-risk groups include:
 
-Random Forest was chosen because it:
+  * Month-to-month contracts
+  * Mid-tenure customers
 
-* Handles categorical and numerical features effectively
-* Captures complex relationships in customer behavior
-* Provides feature importance insights
+---
 
-The dataset was split into training and testing sets to evaluate the model’s predictive performance.
+# Business Recommendations
 
-## 4. Model Evaluation
+* Encourage **long-term contracts through discounts**
+* Improve **fiber optic pricing or service quality**
+* Bundle **value-added services**
+* Target **retention campaigns toward high-risk segments**
 
-Model performance was assessed using:
-
-* Confusion Matrix
-* Classification Report
-
-These metrics helped evaluate the model's ability to correctly identify customers who are likely to churn.
-
-## 5. Churn Prediction
-
-After training, the model was used to generate predictions for additional customer records.
-
-A new variable was created: Customer_Status_Predicted
-
-This identifies customers at risk of leaving and allows businesses to focus retention strategies on high-risk segments.
-
-## 6. Power BI Dashboard
-
-The final dataset containing churn predictions was loaded into **Power BI** to build an interactive dashboard.
-
-The dashboard enables exploration of:
-
-* Overall churn distribution
-* Customer segments with higher churn risk
-* Behavioral patterns linked to churn
-* Key factors influencing customer retention
+---
 
 # Repository Structure
 
@@ -107,17 +79,7 @@ customer-churn-analysis
 │   └── prediction_data.csv
 │
 ├── dashboard
-│   └── customer_churn_dashboard.pbix
+│   └── churn_dashboard.pbix
 │
 └── README.md
 ```
-
-# Project Outcome
-
-This project demonstrates an **end-to-end data analytics workflow**, integrating:
-
-* SQL for structured data extraction
-* Python for predictive modeling
-* Power BI for business insight visualization
-
-The result is a pipeline capable of identifying churn patterns and predicting customer churn risk, enabling businesses to design more effective retention strategies.
