@@ -10,8 +10,12 @@ Data was extracted using SQL, modeled using Python (Random Forest), and visualiz
 
 # Dashboard Preview
 
-*(add your screenshot here)*
+![Dashboard](dashboard-preview.png)
+<p align="center">
+<img src="dashboard-preview.png" width="900">
+</p>
 
+Power BI dashboard analyzing churn patterns across customer demographics, contracts, services, and tenure.
 ---
 
 # Key Insights
