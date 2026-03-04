@@ -10,7 +10,6 @@ Data was extracted using SQL, modeled using Python (Random Forest), and visualiz
 
 # Dashboard Preview
 
-![Dashboard](dashboard-preview.png)
 <p align="center">
 <img src="dashboard-preview.png" width="900">
 </p>
